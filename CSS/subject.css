@@ -44,7 +44,7 @@ body{
     top: 0;
     left: 0;
     z-index: 1000;
-    align-items: center;
+    padding: 0 1rem;
 }
 
 .header-content{
@@ -117,6 +117,21 @@ body{
     background-color: var(--second-primary-color);
 }
 
+@media screen and (max-width:390px) {
+    .header-content{
+        justify-content: center;
+    }
+    .join-button{
+        display: none;
+    }    
+}
+
+@media screen and (max-width:870px) {
+    .nav-link{
+        display: none;
+    }    
+}
+
  /* <!--top container part --> */
 
 .hero-container{
@@ -163,6 +178,7 @@ body{
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     padding: 0.3rem 0.5rem;
     border-radius: 1rem;
+    justify-content: center;
 }
 
 .hero-link{
@@ -182,6 +198,40 @@ body{
     color: var(--background-color);
 }
 
+@media screen and (max-width:490px) {
+    .hero-container{
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .hero-content{
+        width: 100%;
+        justify-content: center;
+    }
+    .hero-right{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero-link{
+        font-size: 0.7rem;
+        padding: 0.5rem 0.7rem;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .hero-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;        
+        gap: 3rem;
+        justify-content: center;
+        text-align: center;
+    } 
+    .hero-left{
+        gap: 1.5rem;
+    }
+}
+
  /* <!--main subject container--> */
 
 .subject-container{
@@ -199,9 +249,9 @@ body{
     width: 100%;
     max-width: 1440px;
     display: grid;
-    
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
 
 .subject-card{
@@ -355,6 +405,20 @@ body{
     color: var(--background-color);
 }
 
+@media screen and (max-width:420px) {
+    .subject-container{
+        padding: 1rem;
+    }
+    .subject-content{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width:430px) {
+    .subject-container{
+        margin-bottom: 1rem;
+    }  
+}
 
 /* subject footer part */
 
@@ -411,4 +475,12 @@ body{
 
 .footer-link-txt:hover{
     color: var(--primary-color);
+}
+
+@media screen and (max-width:768px) {
+    .footer-content{
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }    
 }
