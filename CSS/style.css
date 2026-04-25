@@ -44,6 +44,8 @@ body{
     top: 0;
     left: 0;
     z-index: 1000;
+    background-color: var(--background-color);
+    padding: 0 1rem;
 }
 
 .header-content{
@@ -108,6 +110,10 @@ body{
     gap: 1.5rem;
 }
 
+.signin-button-txt, .getStarted-button-text{
+    text-decoration: none;
+}
+
 .signin-button{
     padding: 0.7rem 1.2rem;
     border: none;
@@ -137,6 +143,51 @@ body{
     background-color: var(--second-primary-color);
 }
 
+    /*responsive header*/
+@media screen and (max-width:340px) {
+    .getStarted-button{
+        display: none;
+    }    
+    .header-content{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+  .signin-button {
+    display: none;
+  }
+
+  .nav-link {
+    display: none;
+  }
+} 
+
+@media (min-width: 501px) and (max-width: 900px) {
+  .signin-button {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width:900px) {
+    .nav-link{
+        display: none;
+    } 
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+  .signin-button {
+    display: block;
+  }
+}
+
+@media (min-width:900px) and (max-width:940px) {
+    .signin-button{
+        display: none;
+    }
+}
+
   /* section part */
 
 .section-container{
@@ -144,15 +195,15 @@ body{
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    padding: 5rem 1.2rem;
 }
 
 .section-content{
     width: 100%;
     max-width: 1440px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-    padding: 5rem 1rem;
 }
 
 .section-left{
@@ -264,14 +315,14 @@ body{
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-@media screen and (max-width:450px) {
+/* @media screen and (max-width:450px) {
 
     body{
         overflow-x: hidden;
     }
 
     .header-content{
-        gap: 2rem;
+        padding: 1rem;
     }
 
     .nav-link,
@@ -329,6 +380,45 @@ body{
         width: 100%;
         max-width: 385px;
     }
+} */
+
+@media screen and (max-width:450px) {
+    .section-button{
+        flex-direction: column;
+    }    
+}
+
+@media screen and (max-width:1000px) {
+    .section-content{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .section-left{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-button{
+        justify-content: center;
+        width: 100%;
+    }
+    .Subjects-button,
+    .download-button{
+        width: 100%;
+    }
+    .section-right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-img{
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+    }
 }
 
   /* featured part */
@@ -336,10 +426,11 @@ body{
 .featured-container{
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 3rem;
+    align-items: center;
+    justify-content: center;
     background-color: #cccccc12;
-    padding: 2rem;
+    padding: 5rem 1.2rem;
+    /* padding: 2rem; */
 }
 
 .featured-content{
@@ -348,7 +439,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 4rem 4.5rem;
 }
 
 .featured-top{
@@ -369,8 +459,10 @@ body{
 
 .featured-bottom{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .featured-card{
@@ -475,14 +567,20 @@ body{
     }
 }
 
-  /* <!-- EduFlow resource  part --> */
+@media screen and(max-width:1200px) {
+    .featured-bottom{
+        grid-template-rows: repeat(2,2fr);
+    }
+}
+
+  /* <!-- EduFlow container  part --> */
 
 .eduflow-container{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
-    padding: 2rem 5rem;    
+    padding: 5rem 1rem;    
     background-color: var(--background-color);
 }
 
@@ -557,17 +655,16 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
     border-top: 1px solid var(--gray);
-    padding: 2rem 3.3rem;
+    padding: 3rem 2rem 1.7rem 2rem;
 }
 
 .footer-content{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     border-bottom: 1px solid var(--gray);
+    padding-bottom: 3rem;
 }
 
 .footer-box{
