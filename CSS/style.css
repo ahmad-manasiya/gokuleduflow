@@ -67,6 +67,7 @@ body{
     color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
+    padding: 0 1rem;
 }
 
 .logo-content i{
