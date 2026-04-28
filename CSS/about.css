@@ -44,6 +44,7 @@ body{
     top: 0;
     left: 0;
     z-index: 1000;
+    background-color: var(--background-color);
 }
 
 .header-content{
@@ -116,6 +117,21 @@ body{
     background-color: var(--second-primary-color);
 }
 
+@media screen and (max-width:400px) {
+    .getStarted-button{
+        display: none;
+    }    
+    .header-content{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .nav-link{
+        display: none;
+    }
+}
+
 /* <!-- About sectio part--> */
 
 .about-container{
@@ -123,18 +139,18 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 3rem 1rem;
 }
 
 .about-content{
     width: 100%;
-    max-width: 1000px;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
     margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 .about-top{
@@ -159,14 +175,16 @@ body{
     font-size: 1.2rem;
     color: var(--primary-text-color);
     font-weight: 500;
-    margin: 0 8rem 2rem 8rem;
+    margin-bottom: 4rem;
 }
 
 .about-right{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 5rem;
-    padding: 3rem;
+    padding-top: 3rem;
 }
 
 .about-right-box{
@@ -200,14 +218,26 @@ body{
     text-transform: uppercase;
 }
 
-    /* mission part */
+@media screen and (max-width: 540px) {
+    .about-top-titel{
+        font-size: 2.5rem;
+    }
+}
 
+@media screen and (max-width: 800px) {
+    .about-right{
+        flex-direction: column;
+    }
+}
+
+    /* mission part */
+/* 
 .mission-container{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 7rem;
+    padding: 7rem 1rem;
     background-color: rgba(220, 220, 220, 0.1);
     margin-bottom: 3rem;
 }
@@ -217,9 +247,15 @@ body{
     max-width: 1440PX;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     gap: 3rem;
+}
+
+.mission-left{
+    width: 100%;
+    display: flex;
+   
 }
 
 .mission-left-img{
@@ -231,12 +267,11 @@ body{
 }
 
 .mission-right{
-    max-width: 50%;
+    width: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    text-align: left;
-    justify-content: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 
 .mission-titel{
@@ -251,6 +286,7 @@ body{
 }
 
 .mission-right-box{
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -311,6 +347,42 @@ body{
     font-size: 1.7rem;
 }
 
+@media screen and (max-width: 660px){
+    .mission-left-image-container{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .mission-left-img{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .mission-content{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .mission-content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 5rem;
+    }
+    .mission-left-image-container{
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    .mission-left-img{
+        max-width: 700px;
+    }
+
+} */
+
     /* features part */
 
 .features-container{
@@ -318,7 +390,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
     margin-top: 0rem;
     background-color: var(--background-color);
 }
@@ -332,7 +404,6 @@ body{
     justify-content: center;
     text-align: center;
     gap: 3rem;
-    padding: 2rem 7rem;
 }
 
 .features-top{
@@ -353,8 +424,10 @@ body{
 }
 
 .features-bottom{
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
@@ -406,15 +479,18 @@ body{
    /* footer part */
 
 .footer-container{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 5rem;
+    padding: 2rem 1rem;
     background-color: #f0f0f04a;
     border: 2px solid var(--light-gray);
 }
 
 .footer-content{
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -446,18 +522,24 @@ body{
     gap: 1.5rem;
 }
 
-.nav-link{
+.footer-nav-link{
     text-decoration: none;
     font-size: 1rem;
     color: var(--primary-text-color);
     font-weight: 500;
 }
 
-.nav-link:hover{
+.footer-nav-link:hover{
     color: var(--primary-color);
 }
 
 .footer-copyright{
     color: var(--primary-text-color);
     font-size: 0.8rem;
+}
+
+@media screen and (max-width: 385px) {
+    .nav-link-container{
+        gap: 1rem;
+    }
 }
