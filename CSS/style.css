@@ -850,6 +850,7 @@ body{
     .footer-copyright{
         padding-left: 0;
         padding-right: 0;
+        gap: 2rem;
     }
 }   
 
