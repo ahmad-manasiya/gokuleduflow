@@ -360,6 +360,7 @@ body{
     border-radius: 0.5rem;
     text-decoration: none;
     text-align: center;
+    border: none;
 }
 
 .send-msg-btn:hover{
